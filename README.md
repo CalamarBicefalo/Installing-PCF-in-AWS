@@ -55,4 +55,4 @@ A template [is provided](/awsdeploy-template.yml) for your convenience.
 cfawsinit will proceed with the cloudformation procedure in first instance and will install 
 and configure Ops Manager afterwards. No tiles will be set up with the current version.
 
-TODO: explain how to set up DNS and how the installer is failing when that's not done.
+As explained in [Installation Docs](http://docs.pivotal.io/pivotalcf/1-7/customizing/requirements.html#general) it is necessary to point a DNS domain, ideally a wildcard domain, at the load balancer. On AWS, the name/IP address of the load balancer is unknown until it is created. Therefore only after the cloudformation script created ELB you can log in to your DNS registrar and point *.domain to your ELB using a CNAME record as described [here](http://docs.pivotal.io/pivotalcf/1-7/customizing/cloudform-er-config.html#cname).
