@@ -1,0 +1,15 @@
+region: eu-west-1
+email: REQUIRED
+ssh_private_key_path: REQUIRED
+ssh_key_name: REQUIRED
+domain: REQUIRED
+PIVNET_TOKEN: REQUIRED
+ops-manager:
+    version: latest
+    beta-ok: false
+elastic-runtime:
+    version: latest
+    beta-ok: false
+    cloudformation-template: pcf_1_7_cloudformation_singlefile.json
+ssl_cert_arn: REQUIRED
+skip_cert_verify: true
